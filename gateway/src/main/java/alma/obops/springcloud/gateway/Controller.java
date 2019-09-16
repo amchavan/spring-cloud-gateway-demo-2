@@ -1,8 +1,14 @@
 package alma.obops.springcloud.gateway;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import reactor.core.publisher.Mono;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * TODO
@@ -11,8 +17,17 @@ import reactor.core.publisher.Mono;
 @RestController
 public class Controller {
 
+    private TypeReference<HashMap<String, Double>> typeRef
+            = new TypeReference<HashMap<String, Double>>() {};
+    private ObjectMapper mapper = new ObjectMapper();
+
     @RequestMapping("/fallback")
-    public Mono<String> fallback() {
-        return Mono.just( "fallback\n" );
+    public Mono<Object> fallback() throws IOException {
+        Map<String, Object> map = new HashMap<>();
+        if( GatewayApplication.lastMeteo != null ) {
+            map = mapper.readValue( GatewayApplication.lastMeteo, typeRef );
+            map.put( "stale", true );
+        }
+        return Mono.just( map );
     }
 }
