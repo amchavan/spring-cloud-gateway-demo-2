@@ -13,8 +13,8 @@ public class Application {
     public RouteLocator myRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route( "book1", p -> p
-                        .path("/book/**").and()
-                        .weight( "a", 5 )
+                        .path("/book/**")
+                                .and().weight( "a", 5 )
                         .filters(f -> f.rewritePath("/book/(?<id>.*)", "/book-service/book/${id}"))
                         .uri("http://localhost:10000")
                         )
