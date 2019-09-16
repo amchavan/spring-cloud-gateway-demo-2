@@ -14,7 +14,7 @@ public class Controller {
     private static final Logger LOGGER = LoggerFactory.getLogger( Controller.class.getSimpleName() );
 
     @GetMapping( "/book/{id}" )
-    public alma.obops.springcloud.bookservice.Book findById(@PathVariable String id ) {
+    public alma.obops.springcloud.bookservice.Book findById(@PathVariable String id ) throws InterruptedException {
         Book u = new Book();
         u.id = id;
         u.title = "This is book " + id;
@@ -23,6 +23,7 @@ public class Controller {
         int year = ThreadLocalRandom.current().nextInt( 1900, 2019 );
         u.year = Integer.toString( year );
         LOGGER.info( "id=" + id + " ==> " + u.toString() );
+        Thread.sleep( 500L );
         return u;
     }
 }

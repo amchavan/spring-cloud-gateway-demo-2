@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc39e3df-355c-4068-b432-8e6f4b217820" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../book-service/src/main/java/alma/obops/springcloud/bookservice/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../book-service/src/main/java/alma/obops/springcloud/bookservice/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/Application.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

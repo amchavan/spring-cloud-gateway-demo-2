@@ -12,11 +12,18 @@ public class Application {
 
     public RouteLocator myRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route(p -> p
-                        .path("/book/**")
+                .route( "book1", p -> p
+                        .path("/book/**").and()
+                        .weight( "a", 5 )
                         .filters(f -> f.rewritePath("/book/(?<id>.*)", "/book-service/book/${id}"))
                         .uri("http://localhost:10000")
-                        .id( "book1" ))
+                        )
+                .route( "book2", p -> p
+                        .path("/book/**")
+                                .and().weight( "a", 5 )
+                        .filters(f -> f.rewritePath("/book/(?<id>.*)", "/book-service/book/${id}"))
+                        .uri("http://localhost:10001")
+                        )
 //                .route(p -> p
 //                        .header( "Fallback", "true" )
 //                        .filters(f -> f.hystrix(config -> config
