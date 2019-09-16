@@ -4,5 +4,5 @@ for i in ${ids}
 do
     curl http://localhost:9999/next-meteo
     echo
-    sleep 5
+    sleep 3
 done

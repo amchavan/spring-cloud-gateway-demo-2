@@ -1,5 +1,7 @@
 package alma.obops.springcloud.gateway;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.gateway.route.RouteLocator;
@@ -11,6 +13,7 @@ import reactor.core.publisher.Mono;
 public class GatewayApplication {
 
     static String lastMeteo = null;
+    private static final Logger LOGGER = LoggerFactory.getLogger( Controller.class.getSimpleName() );
 
     @Bean
     public RouteLocator myRoutes(RouteLocatorBuilder builder) {
@@ -30,13 +33,14 @@ public class GatewayApplication {
                 .route( "meteo with fallback", p -> p
                         .path("/next-meteo")
                         .filters(f -> f
-                                .hystrix(config -> config.setName( "mycmd" )
+                                .hystrix(config -> config.setName( "slow-meteo" )
                                                          .setFallbackUri( "forward:/fallback"))
                                 .rewritePath( "/next-meteo", "/meteo-service/next-point" )
-                                .modifyResponseBody( String.class, String.class, (exchange, s) -> {
+                                .modifyResponseBody( String.class, String.class, (exchange, body) -> {
                                     // don't modify, just save the last good one
-                                    lastMeteo = s;
-                                    return Mono.just( s );
+                                    lastMeteo = body;
+                                    LOGGER.info( ">>> Saving: " + body );
+                                    return Mono.just( body );
                                 })
                         )
                         .uri("http://localhost:10002"))

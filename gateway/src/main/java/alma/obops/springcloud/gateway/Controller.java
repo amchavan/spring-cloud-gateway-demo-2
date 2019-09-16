@@ -23,11 +23,10 @@ public class Controller {
 
     @RequestMapping("/fallback")
     public Mono<Object> fallback() throws IOException {
-        Map<String, Object> map = new HashMap<>();
-        if( GatewayApplication.lastMeteo != null ) {
-            map = mapper.readValue( GatewayApplication.lastMeteo, typeRef );
-            map.put( "stale", true );
-        }
+        Map<String, Object> map;
+        map = mapper.readValue( GatewayApplication.lastMeteo, typeRef );
+        map.put( "stale", true );
+
         return Mono.just( map );
     }
 }

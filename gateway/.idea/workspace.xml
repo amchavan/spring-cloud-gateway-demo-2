@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc39e3df-355c-4068-b432-8e6f4b217820" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/GatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../meteo-loop.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/Application.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/GatewayApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../meteo-loop.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../meteo-loop.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../meteo-service/src/main/java/alma/obops/springcloud/meteoservice/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../meteo-service/src/main/java/alma/obops/springcloud/meteoservice/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../meteo-service/src/main/java/alma/obops/springcloud/meteoservice/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../meteo-service/src/main/java/alma/obops/springcloud/meteoservice/MeteoService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
