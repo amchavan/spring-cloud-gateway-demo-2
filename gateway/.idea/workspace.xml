@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc39e3df-355c-4068-b432-8e6f4b217820" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/RouteConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/GatewayApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../meteo-loop.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../meteo-loop.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../meteo-service/src/main/java/alma/obops/springcloud/meteoservice/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../meteo-service/src/main/java/alma/obops/springcloud/meteoservice/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../meteo-service/src/main/java/alma/obops/springcloud/meteoservice/Meteo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../meteo-service/src/main/java/alma/obops/springcloud/meteoservice/Meteo.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +19,13 @@
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="208" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -98,6 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1568389246266</updated>
       <workItem from="1568389247876" duration="3320000" />
+      <workItem from="1568707876629" duration="10529000" />
     </task>
     <servers />
   </component>
@@ -109,7 +119,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -117,6 +129,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/Controller.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gateway$Application.ic" NAME="Application Coverage Results" MODIFIED="1568389794548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
