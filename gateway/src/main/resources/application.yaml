@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: rate_limiting
+          uri: http://localhost:10010
+          predicates:
+            - Path=/current-datetime
+          filters:
+            - RewritePath=/current-datetime, /time-service/now
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 5

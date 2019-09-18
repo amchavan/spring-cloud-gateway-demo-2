@@ -2,14 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc39e3df-355c-4068-b432-8e6f4b217820" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/RouteConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/amchavan.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_1_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_reactive_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../time-service/time-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/GatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/RouteConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/RouteConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../meteo-service/src/main/java/alma/obops/springcloud/meteoservice/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../meteo-service/src/main/java/alma/obops/springcloud/meteoservice/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../meteo-service/src/main/java/alma/obops/springcloud/meteoservice/Meteo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../meteo-service/src/main/java/alma/obops/springcloud/meteoservice/Meteo.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,10 +72,10 @@
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -107,7 +120,8 @@
       <option name="presentableId" value="Default" />
       <updated>1568389246266</updated>
       <workItem from="1568389247876" duration="3320000" />
-      <workItem from="1568707876629" duration="10529000" />
+      <workItem from="1568707876629" duration="10756000" />
+      <workItem from="1568795965561" duration="7566000" />
     </task>
     <servers />
   </component>
@@ -134,9 +148,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/alma/obops/springcloud/gateway/Controller.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="10" />
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-gateway-core/2.1.1.RELEASE/spring-cloud-gateway-core-2.1.1.RELEASE-sources.jar!/org/springframework/cloud/gateway/filter/factory/RequestRateLimiterGatewayFilterFactory.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-gateway-core/2.1.1.RELEASE/spring-cloud-gateway-core-2.1.1.RELEASE-sources.jar!/org/springframework/cloud/gateway/filter/ratelimit/RedisRateLimiter.java</url>
+          <line>206</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

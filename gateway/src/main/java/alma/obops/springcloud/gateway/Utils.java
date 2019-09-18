@@ -7,13 +7,11 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Utils {
-
+class Utils {
 
     private static String lastMeteo = "{}";
 
-    private static TypeReference<HashMap<String, Object>> typeRef
-            = new TypeReference<HashMap<String, Object>>() {};
+    private static TypeReference<HashMap<String, Object>> typeRef = new TypeReference<>() {};
     private static ObjectMapper mapper = new ObjectMapper();
 
     static Map<String,Object> jsonToMap(String json) {

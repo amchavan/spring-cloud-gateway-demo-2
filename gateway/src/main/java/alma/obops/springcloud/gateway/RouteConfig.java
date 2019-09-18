@@ -1,5 +1,6 @@
 package alma.obops.springcloud.gateway;
 
+import org.springframework.cloud.gateway.filter.ratelimit.KeyResolver;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
@@ -10,8 +11,18 @@ import reactor.core.publisher.Mono;
 public class RouteConfig {
 
     @Bean
+    public KeyResolver hostAddressKeyResolver() {
+        return exchange -> {
+            final var hostAddress = exchange.getRequest().getRemoteAddress().getAddress().getHostAddress();
+            return Mono.just( hostAddress );
+        };
+    }
+
+    @Bean
     public RouteLocator myRoutes(RouteLocatorBuilder builder) {
+
         return builder.routes()
+                
                 // The following two routes share the load for the book service
                 // between two servers
                 .route( "book1", p -> p
@@ -38,12 +49,13 @@ public class RouteConfig {
                                 .modifyResponseBody( String.class, String.class, (exchange, body) -> {
                                     if( ! body.contains( "stale" )) {       // is this coming back from fallback?
                                         Utils.setLastMeteo( body );         // NO, this is coming from the meteo service,
-                                        //     save it for the next fallbacks
+                                                                            //     save it for the next fallbacks
                                     }
                                     return Mono.just( body );
                                 })
                         )
                         .uri("http://localhost:10002"))
+
                 .build();
     }
 }
