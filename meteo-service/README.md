@@ -14,7 +14,7 @@ If you need to configure a different port than the default, you
 can either invoke  
 `mvn spring-boot:run -Dspring-boot.run.arguments="-Dserver.port=9987"`  
 or   
-`mvn install; java -jar target/book-service-*.jar --server.port=9987`
+`mvn install; java -jar target/meteo-service-*.jar --server.port=9987`
 
 Example call:  
 `curl http://localhost:10002/meteo-service/next-point`  
