@@ -41,8 +41,8 @@ public class Controller {
 
         // Conjure random humidity and decide how long to wait
         // based on that value
-        Double currentHumidity = ThreadLocalRandom.current().nextDouble( 0, 100 );
-        long sleep = currentHumidity > 50.0 ? LONG_SLEEP : SHORT_SLEEP;
+        int currentHumidity = ThreadLocalRandom.current().nextInt( 0, 100 );
+        long sleep = currentHumidity > 50 ? LONG_SLEEP : SHORT_SLEEP;
         LOGGER.info( "humidity=" + currentHumidity + ", about to sleep " + sleep + " msec" );
 //        if( sleep == LONG_SLEEP ) LOGGER.info( ">>> Start to sleep at " + (new Date()));
         Thread.sleep( sleep );
