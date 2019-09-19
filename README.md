@@ -51,3 +51,8 @@ Try the basic routing functions:
   
 * `curl http://localhost:9999/current-datetime`  
   `curl http://localhost:10010/time-service/now`
+
+## Load balancing
+
+The gateway allows for basic load balancing between two Book Service
+installations. You can run the 

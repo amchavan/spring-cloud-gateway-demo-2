@@ -21,7 +21,6 @@ public class Controller {
         book.author = "A. U. Thor (" + id + ")";
         book.year = Integer.parseInt( id );
         LOGGER.info( "id=" + id + " ==> " + book.toString() );
-        Thread.sleep( 500L );
         return book;
     }
 }

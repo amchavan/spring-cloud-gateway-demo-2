@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d7ddbd0-a89e-4493-9308-bf914c8f8d69" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/book-loop.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/alma/obops/springcloud/bookservice/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/alma/obops/springcloud/bookservice/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-service/src/main/java/alma/obops/springcloud/bookservice/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/alma/obops/springcloud/bookservice/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/alma/obops/springcloud/bookservice/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/alma/obops/springcloud/bookservice/BookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/alma/obops/springcloud/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/alma/obops/springcloud/gateway/Gateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meteo-service/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/meteo-service/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/time-service/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/time-service/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/time-service/src/main/java/alma/obops/springcloud/timeservice/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/time-service/src/main/java/alma/obops/springcloud/timeservice/TimeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteo-loop.sh" beforeDir="false" afterPath="$PROJECT_DIR$/meteo-loop.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +53,9 @@
     <property name="settings.editor.selected.configurable" value="profiler.jvm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/alma/obops/springcloud" />
       <recent name="$PROJECT_DIR$" />
@@ -168,7 +164,7 @@
       <workItem from="1568292884825" duration="497000" />
       <workItem from="1568296456505" duration="6257000" />
       <workItem from="1568811408869" duration="93000" />
-      <workItem from="1568879177433" duration="9695000" />
+      <workItem from="1568879177433" duration="11182000" />
     </task>
     <servers />
   </component>

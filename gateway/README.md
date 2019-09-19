@@ -22,5 +22,12 @@ implementation routes incoming HTTP requests as follows:
 ## Load balancing
 
 HTTP requests to `book/{id}` are routed to two concurrent _book-service_ implementations, 
-running on ports 10000 and 10001. Distribution of requests is random and tries to load either
-service with the same number of requests. 
+running on ports 10000 and 10001. Distribution of requests is random and tries to address either
+service with roughly the same number of requests.
+
+The `book-loop.sh` scripts sends sever HTTP requests to the `book` endpoint in rapid succession. 
+Make sure both Book Service terminal windows are visible, then launch the script from 
+a third terminal with `sh book-loop.sh`: you should see the services logging a roughly 
+equal number of responses.
+
+
