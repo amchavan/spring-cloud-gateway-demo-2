@@ -15,15 +15,13 @@ public class Controller {
 
     @GetMapping( "/book/{id}" )
     public alma.obops.springcloud.bookservice.Book findById(@PathVariable String id ) throws InterruptedException {
-        Book u = new Book();
-        u.id = id;
-        u.title = "This is book " + id;
-        u.author = "A. U. Thor (" + id + ")";
-
-        int year = ThreadLocalRandom.current().nextInt( 1900, 2019 );
-        u.year = Integer.toString( year );
-        LOGGER.info( "id=" + id + " ==> " + u.toString() );
+        Book book = new Book();
+        book.id = id;
+        book.title = "This is book " + id;
+        book.author = "A. U. Thor (" + id + ")";
+        book.year = Integer.parseInt( id );
+        LOGGER.info( "id=" + id + " ==> " + book.toString() );
         Thread.sleep( 500L );
-        return u;
+        return book;
     }
 }

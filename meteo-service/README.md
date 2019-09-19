@@ -12,7 +12,7 @@ another port can be configured on the command line.
 Run this with `mvn spring-boot:run`.  
 If you need to configure a different port than the default, you 
 can either invoke  
-`mvn spring-boot:run -Dspring-boot.run.arguments="-Dserver.port=9987"`  
+`mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Dserver.port=9987"`  
 or   
 `mvn install; java -jar target/meteo-service-*.jar --server.port=9987`
 

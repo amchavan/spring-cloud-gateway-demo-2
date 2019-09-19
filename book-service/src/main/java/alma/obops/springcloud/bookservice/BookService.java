@@ -1,13 +1,12 @@
-package alma.obops.springcloud.timeservice;
+package alma.obops.springcloud.bookservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class BookService {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(BookService.class, args);
 	}
-
 }
