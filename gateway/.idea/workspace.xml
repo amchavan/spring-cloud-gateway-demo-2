@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc39e3df-355c-4068-b432-8e6f4b217820" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../book-loop.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../-I" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../book-service/src/main/java/alma/obops/springcloud/bookservice/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../book-service/src/main/java/alma/obops/springcloud/bookservice/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../meteo-loop.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../meteo-loop.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../time-loop.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../time-loop.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +109,7 @@
       <workItem from="1568707876629" duration="10756000" />
       <workItem from="1568795965561" duration="8018000" />
       <workItem from="1568897089440" duration="43000" />
-      <workItem from="1568897165353" duration="2005000" />
+      <workItem from="1568897165353" duration="4115000" />
     </task>
     <servers />
   </component>

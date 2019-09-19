@@ -21,13 +21,26 @@ implementation routes incoming HTTP requests as follows:
 
 ## Load balancing
 
-HTTP requests to `book/{id}` are routed to two concurrent _book-service_ implementations, 
+HTTP requests to `book/{id}` are routed by the gateway to two concurrent _book-service_ implementations, 
 running on ports 10000 and 10001. Distribution of requests is random and tries to address either
-service with roughly the same number of requests.
+service with roughly the same number of requests.  
+See [RouteConfig.java](src/main/java/alma/obops/springcloud/gateway/RouteConfig.java)
 
-The `book-loop.sh` scripts sends sever HTTP requests to the `book` endpoint in rapid succession. 
-Make sure both Book Service terminal windows are visible, then launch the script from 
-a third terminal with `sh book-loop.sh`: you should see the services logging a roughly 
-equal number of responses.
+## Circuit breaker
 
+_meteo-service_ is unreliable: half of the time its responses come quickly,
+otherwise they come with an unacceptable delay. To avoid that the entire
+system hangs waiting for it, the gateway will timeout after 1000 
+milliseconds ("break the circuit") 
+and return the last value it received from the service,
+flagging it as `stale`.  
+See [RouteConfig.java](src/main/java/alma/obops/springcloud/gateway/RouteConfig.java)
 
+## Rate limiting
+
+_time-service_ is a popular service and is at risks to be overused. The gateway introduces a
+rate limiter so that no user can issue more than one request per second; an initial burst of
+up to five requests is allowed for the first second.    
+Excess requests are rejected
+with a `429 Too Many Requests` status.  
+See [application.yaml](src/main/resources/application.yaml)

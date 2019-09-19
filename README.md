@@ -54,5 +54,46 @@ Try the basic routing functions:
 
 ## Load balancing
 
-The gateway allows for basic load balancing between two Book Service
-installations. You can run the 
+HTTP requests to `book/{id}` are routed to two concurrent _book-service_ implementations, 
+running on ports 10000 and 10001. Distribution of requests is random and tries to address either
+service with roughly the same number of requests.
+
+The `book-loop.sh` script sends several HTTP requests to the `book` endpoint in rapid succession. 
+Make sure both Book Service terminal windows are visible, then launch the script from 
+a third terminal with `bash book-loop.sh`: you should see the services logging a roughly 
+equal number of responses.
+
+## Circuit breaker
+
+_meteo-service_ is unreliable: half of the time its responses come quickly,
+otherwise they come with an unacceptable delay. To avoid that the entire
+system hangs waiting for it, the gateway will timeout after 1000 
+milliseconds ("break the circuit") 
+and return the last value it received from the service,
+flagging it as `stale`.
+
+The `meteo-loop.sh` script sends sever HTTP requests to the `next-meteo`
+endpoint. Make sure the Meteo Service terminal window is visible, 
+then launch the script from another terminal with `bash meteo-loop.sh`:
+you should see the service behaving unreliably (that is, delaying 
+responses roughly half of the time) and the client receiving 
+correspondingly "stale" replies.
+
+## Rate limiting
+
+_time-service_ is a popular service and is at risks to be overused. The gateway introduces a
+rate limiter so that no user can issue more than one request per second; an initial burst of
+up to five requests is allowed for the first second.  
+Excess requests are rejected
+with a `429 Too Many Requests` status.
+
+The `time-loop.sh` script sends an HTTP requests to the `current-datetime`
+endpoint every 250 msec. 
+The response is logged on the console as a dot if the request was
+accepted (HTTP status 200) and with an exclamation mark if it
+was rejected.  
+Launch the script from a terminal with `bash time-loop.sh`: 
+you should see an initial series of 4-5 dots followed by `!`
+and `.` in an approximate three-to-one ratio, for instance:  
+`.....!!!.!!!!.!!!.!!!!.!!!.!!!!.!!!.!!!!.!!!.!!!!.
+`
