@@ -39,18 +39,19 @@ ttab -wd meteo-service "mvn spring-boot:run"
 ttab -wd time-service "mvn spring-boot:run"
 ```
 
+The gateway will be launched on port 9999, two book services on 
+ports 10000 and 10001, the meteo service on port 10002 and the time
+service on port 10010
+
 ## Basic routing
 
 Try the basic routing functions:
 
-* `curl http://localhost:9999/book/22`   
-  `curl http://localhost:10000/book-service/book/22` 
+* `curl http://localhost:9999/book/22` → http://localhost:10000/book-service/book/22
  
-* `curl http://localhost:9999/next-meteo`  
-  `curl http://localhost:10002/meteo-service/next-point`
+* `curl http://localhost:9999/next-meteo` → http://localhost:10002/meteo-service/next-point
   
-* `curl http://localhost:9999/current-datetime`  
-  `curl http://localhost:10010/time-service/now`
+* `curl http://localhost:9999/current-datetime`  → http://localhost:10010/time-service/now
 
 ## Load balancing
 
