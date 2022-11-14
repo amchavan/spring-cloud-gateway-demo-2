@@ -15,5 +15,4 @@ or
 
 Example call:  
 `curl http://localhost:10010/time-service/now`  
-Will return:  
-_{"temperature":32.25,"humidity":98.0,"timestamp":"2019-09-19T08:21:21.830"}_
+Will return an ISO (short) datetime string like _2022-11-14T14:57:36.229_
